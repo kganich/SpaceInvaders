@@ -13,14 +13,14 @@ public class Game extends JFrame {
     public static final int DOWN = 40;
     public static final int SPACE = 32;
     public static final int DELAY = 20;
+    public static int score, lives = 3;
+    public static boolean gameOver;
     Canvas canvas = new Canvas();
     public static Cannon cannon = new Cannon();
     public static Ray ray = new Ray();
     public static Wave wave = new Wave();
     public static AlienRays rays = new AlienRays();
     public static Random random = new Random();
-    public static int score, lives = 3;
-    public static boolean gameOver;
 
     public static void main(String[] args) {
         new Game().go();
