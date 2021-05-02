@@ -79,9 +79,9 @@ class Canvas extends JPanel {
         }
     }
 
-    public static void playSound(File f) {
+    public static void playSound(File file) {
         try {
-            AudioInputStream stream = AudioSystem.getAudioInputStream(f);
+            AudioInputStream stream = AudioSystem.getAudioInputStream(file);
             Clip clip = AudioSystem.getClip();
             clip.open(stream);
             clip.setFramePosition(0);
