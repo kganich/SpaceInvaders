@@ -32,8 +32,8 @@ public class AlienRays {
     }
 
     static class AlienRay {
-        final int height = 10;
-        final int dy = 6;
+        final int Y = 10;
+        final int DY = 6;
         int x, y;
 
         AlienRay(int x, int y) {
@@ -41,12 +41,12 @@ public class AlienRays {
             this.y = y;
         }
 
-        void fly() { y += dy; }
+        void fly() { y += DY; }
 
-        boolean hitGround() { return y + height > Game.HEIGHT - 20; }
+        boolean hitGround() { return y + Y > Game.HEIGHT - 20; }
 
         boolean hitCannon() {
-            if (y + height > Game.cannon.getY())
+            if (y + Y > Game.cannon.getY())
                 if (x >= Game.cannon.getX() && x <= Game.cannon.getX() + Game.cannon.getCANNON_X())
 
                     return true;
@@ -55,7 +55,7 @@ public class AlienRays {
 
         void paint(Graphics g) {
             g.setColor(Color.white);
-            g.fillRect(x + 2, y, 2, height);
+            g.fillRect(x + 2, y, 2, Y);
         }
     }
 }
